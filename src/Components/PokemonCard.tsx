@@ -145,10 +145,10 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemonData }) => {
           <img
             src={
               isHovered
-                ? "/public/favourite.png"
+                ? "/favourite.png"
                 : isFavourite
-                ? "/public/favourite.png"
-                : "/public/unfavourite.png"
+                ? "/favourite.png"
+                : "/unfavourite.png"
             }
             alt={isFavourite ? "Remove from favourites" : "Add to favourites"}
             className="size-7"

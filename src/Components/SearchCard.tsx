@@ -64,7 +64,7 @@ const SearchCard: React.FC<SearchCardProps> = ({ allPokemon, onSelect }) => {
       <div className="relative flex flex-col">
         <div className="flex gap-1 items-center border-b-2 w-[11.5rem]">
           <img
-            src="/public/search.png"
+            src="/search.png"
             alt="Search Icon"
             className="size-8 p-1"
           />
