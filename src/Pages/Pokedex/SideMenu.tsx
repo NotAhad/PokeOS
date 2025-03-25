@@ -19,7 +19,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
     <div className="flex gap-[5.5rem] items-center justify-between">
 
       <div className="flex gap-1 items-center border-b-2 w-[11.5rem]">
-        <img src="/public/search.png" alt="" className="size-8 p-1"/>
+        <img src="/search.png" alt="" className="size-8 p-1"/>
         <input
           type="text"
           placeholder="ENTER POKEMON"
