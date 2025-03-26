@@ -1,6 +1,6 @@
 # PokéOS: A Dynamic Pokémon Web Application
 
-PokéOS is a dynamic and engaging Pokémon web application that integrates the Pokémon API to provide an optimized and accessible experience. The project features a dynamic Pokédex, a Pokémon comparison tool, a favorites tracker with persistent state, and an interactive guessing game. Built with React, Tailwind CSS, and TypeScript, PokéOS demonstrates proficiency in state management, memoization, debounced input handling, and modern UI design practices.
+PokéOS is a dynamic and engaging Pokémon web application that integrates the Pokémon API to provide an optimized and accessible experience. The project features a dynamic Pokédex, a Pokémon comparison tool, a favorites tracker with persistent state and an interactive guessing game. Built with React, Tailwind CSS and TypeScript. PokéOS demonstrates proficiency in state management, memoization, debounced input handling and modern UI design practices.
 
 ## Table of Contents
 
@@ -13,11 +13,11 @@ PokéOS is a dynamic and engaging Pokémon web application that integrates the P
 
 ## Overview
 
-PokéPortal is designed to deliver a comprehensive Pokémon experience directly in your browser. This application leverages:
+PokéOS is designed to deliver a comprehensive Pokémon experience directly in your browser. This application leverages:
 
 - **React & TypeScript:** Building a robust and type-safe interface with reusable components.
 - **Tailwind CSS:** Creating a modern and responsive design that adapts to various screen sizes.
-- **Pokémon API Integration:** Dynamically fetching Pokémon data, including stats, images, and types.
+- **Pokémon API Integration:** Dynamically fetching Pokémon data, including stats, images and types.
 - **State Management & Persistence:** Utilizing Context API and local storage to manage favorites and user interactions.
 - **Optimized Interactions:** Employing memoization and debounced input handling to ensure smooth performance.
 
@@ -64,12 +64,12 @@ PokéPortal is designed to deliver a comprehensive Pokémon experience directly 
 
 - **Browse through the extensive list of Pokémon.**
 - **Use the search bar to quickly find your favorite Pokémon.**
-- **Filter Pokémon by type using the side menu.**
+- **Filter Pokémon by type using the button.**
 
 **Comparison Tool:**
 
 - **Select two Pokémon to view a side-by-side comparison of their stats and characteristics.**
-- **Compare attributes such as height, weight, and key battle statistics.**
+- **Compare attributes such as height, weight and key battle statistics.**
 
 **Favorites Tracker:**
 
@@ -88,18 +88,20 @@ PokéPortal is designed to deliver a comprehensive Pokémon experience directly 
 ### 1. Efficient Data Fetching from the Pokémon API
 
 **Problem:**
-Fetching data for over 1000 Pokémon in one go can lead to performance issues and rate limiting.
+Fetching data for 1000 Pokémon in one go can lead to performance issues and rate limiting.
 
 **Solution:**
 Implemented batch processing and introduced delays between fetches to minimize rate limiting. The application fetches Pokémon data in manageable batches, ensuring a smoother data loading experience.
 
 **Example:**
 
+```jsx
 // Processing in batches to reduce rate limiting issues.
 for (let i = 0; i < data.results.length; i += batchSize) {
-// Fetch each batch and delay the subsequent requests.
-await new Promise((resolve) => setTimeout(resolve, 200));
+  // Fetch each batch and delay the subsequent requests.
+  await new Promise((resolve) => setTimeout(resolve, 200));
 }
+```
 
 ### 2. Optimized Rendering with Memoization and Debounced Inputs
 
@@ -150,5 +152,5 @@ Adopted best practices in accessibility by using semantic HTML, proper ARIA attr
 
 ## Future Improvements
 
--- **Enhanced Animations:** Incorporate advanced animations using libraries like GSAP for smoother transitions and interactive feedback.
--- **Advanced Search and Filters:** Introduce more granular search options, such as filtering by multiple types, abilities or generation.
+- **Enhanced Animations:** Incorporate advanced animations using libraries like GSAP for smoother transitions and interactive feedback.
+- **Advanced Search and Filters:** Introduce more granular search options, such as filtering by multiple types, abilities or generation.
