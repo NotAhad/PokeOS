@@ -113,6 +113,7 @@ Utilized React's memoization with useMemo to cache filtered results and a custom
 
 **Example:**
 
+```jsx
 // Custom hook for debouncing input values
 function useDebounce<T>(value: T, delay: number): T {
 const [debouncedValue, setDebouncedValue] = useState(value);
@@ -122,6 +123,7 @@ return () => clearTimeout(timer);
 }, [value, delay]);
 return debouncedValue;
 }
+```
 
 ### 3. State Persistence with Local Storage
 
@@ -133,14 +135,19 @@ Implemented a custom hook using local storage to persist the favorites list. Thi
 
 **Example:**
 
-const [storedValue, setStoredValue] = useState<T>(() => {
-try {
-const item = window.localStorage.getItem(key);
-return item ? JSON.parse(item) : initialValue;
-} catch (error) {
-return initialValue;
-}
-});
+```jsx
+const [storedValue, setStoredValue] =
+  useState <
+  T >
+  (() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      return initialValue;
+    }
+  });
+```
 
 ### 4. Creating an Accessible and Responsive UI
 
